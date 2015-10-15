@@ -26,14 +26,15 @@ var rjsconfig = {
     // ... more require.js options
 };
 
-var modules=['page/index/main'];
+var modules=['page/index/main','page/regist/main'];
 gulp.task('requirejs', function() {
     modules.forEach(function(i){
         rjsconfig.name = i;
         rjsconfig.out = i+'.js';
-        console.log(rjsconfig)
+        arr.push(rjs(rjsconfig).pipe(uglify()));
         rjs(rjsconfig).pipe(uglify()).pipe(gulp.dest('dist'));
     });
+
 });
 
 gulp.task('default', ['requirejs','js', 'css' ]);

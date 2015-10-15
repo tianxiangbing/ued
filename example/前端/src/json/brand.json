@@ -1,0 +1,36 @@
+{
+	"status":true,
+	"msg":"出重故障，请重试！",
+	"data":[
+	{
+	"mainCategory":1,
+	"mainCategoryText":"手饰、珠宝",
+	"detailedCategory":4,
+	"detailedCategoryText":"珠宝",
+	"brandName":1,
+	"brandType":1,
+	"brandTypeText":"xxx",
+	"managementModel":2,
+	"managementModelText":"模式",
+	"serviceLifeStartTime":"2013-12-11 22:00:00",
+	"serviceLifeEndTime":"2015-12-11 22:00:00",
+	"brandDescription":"dasdasd",
+	"brandLogo":"http://ott.wansecheng.com/weidian/wdgoods/1421671057774.jpg"
+	},
+	{
+	"mainCategory":1,
+	"mainCategoryText":"手饰、珠宝",
+	"detailedCategory":4,
+	"detailedCategoryText":"珠宝",
+	"brandName":1,
+	"brandType":1,
+	"brandTypeText":"xxx",
+	"managementModel":2,
+	"managementModelText":"模式",
+	"serviceLifeStartTime":"2013-12-11 22:00:00",
+	"serviceLifeEndTime":"2015-12-11 22:00:00",
+	"brandDescription":"222222",
+	"brandLogo":"http://ott.wansecheng.com/weidian/wdgoods/1421671057774.jpg"
+	}
+	]
+}

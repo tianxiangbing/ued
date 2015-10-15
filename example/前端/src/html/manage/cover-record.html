@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>商品管理</title>
+		<link rel="stylesheet" type="text/css" href="../../css/page/manage.css">
+	</head>
+	<body>
+		<div id="left-menu" class="tcenter">
+			<a href="#" class="icon icon-kale_logo_red mt20"></a>
+			<p class="lh30 f12 colorafbed1">卡乐猫供应商</p>
+			<div class="menu-list">
+				<a href="index.html"><i class="icon icon-ic-guanli"></i><div>商品管理</div></a>
+				<a class="current" href="cover-record.html"><i class="icon icon-ic-cangku"></i><div>仓前记录</div></a>
+				<a href="settlement-center.html"><i class="icon icon-ic-money"></i><div>结算中心</div></a>
+				<a href="brand-manage.html"><i class="icon icon-ic-brand"></i><div>品牌管理</div></a>
+			</div>
+		</div>
+		<div id="container">
+			<div>
+				<div id="top-menu"><div class="fr"><a class="inlineblock"><i class="icon icon-Path728 fr"></i>账户信息</a><a class="inlineblock"><i class="icon icon-quitcopy fr"></i>退出</a></div><h1 class="corpName">杭州市万色城网络科技有限公司</h1></div>
+				<div class="container">
+					<div id="crumbs" class="f12">
+						<i class="icon icon-ic-home"></i><a class="ml10" href="index.html">微商城</a><i class="icon icon-forward ml10"></i><a class="ml10" href="#">商品管理 </a>
+					</div>
+					<!-- 下面开始是内容区域 -->
+					<div class="table-container">
+						<div class="search clearfix form">
+							<div class="label fl">订单编号</div>
+							<div class="c-input fl idate"><input type="text" class=" txt-input w200" name="order_no"></div>
+							<div class="label fl">供应商</div>
+							<div class="c-input fl idate"><input type="text" class=" txt-input w200" name="supply_name"></div>
+							<div class="label fl">申请时间</div>
+							<div class="c-input fl idate"><input type="text" class="calendar txt-input w150"><i class="icon icon-ic-data"></i></div>
+							<div class="label fl">至</div>
+							<div class="c-input fl idate"><input type="text" class="calendar txt-input w150"><i class="icon icon-ic-data"></i></div>
+							<div class="label fl">审核状态</div>
+							<div class="c-input fl"><select name="txtname" id="" class="txt-input w150"><option value="">全部</option></select></div>
+							<div class="fl"><a class="btn btn-red ml10" id="search">搜索</a></div>
+						</div>
+						<div id="tab-list" ajaxurl="/src/json/list.json">
+							loading...
+						</div>
+					</div>
+					<!-- end -->
+				</div>
+				<div id="pager"></div>
+			</div>
+		</div>
+		<script type="text/text-tpl" id="tpl-list">
+			<table class="tab-list">
+					<thead>
+							<tr>
+									<th class="first-cell">序号</th>
+									<th>订单号</th>
+									<th>供应商</th>
+									<th>申请入库时间</th>
+									<th>采购员</th>
+									<th>联系电话</th>
+									<th>申请时间</th>
+									<th>状态</th>
+									<th>操作</th>
+							</tr>
+					</thead>
+					<tbody>
+							{{#each data}}
+							<tr>
+									<td class="first-cell">{{@index}}</td>
+									<td>{{goods_id}}</td>
+									<td>{{goods_name}}</td>
+									<td>{{{goods_name}}}</td>
+									<td>122.00</td>
+									<td>30.00</td>
+									<td>433</td>
+									<td class="status">
+									{{#equals status 0}}
+										<span class="status0">已申请</span>
+									{{/equals}}
+									{{#equals status 1}}
+										<span class="status1">审核通过</span>
+									{{/equals}}
+									{{#equals status 2}}
+										<span class="status2">部分通过</span>
+									{{/equals}}
+									{{#equals status 3}}
+										<span class="status3">驳回</span>
+									{{/equals}}
+									{{#equals status 4}}
+										<span class="status4">已下单</span>
+									{{/equals}}
+									{{#equals status 5}}
+										<span class="status5">已入库</span>
+									{{/equals}}
+									</td>
+									<td>
+									{{#equals status 0}}
+										<a href="../../json/data.json" class="mr10 js-ajax" js-ajax-param='id="{{goods_id}}"'>撤消</a>
+									{{/equals}} <a href="cover-info.html">查看</a></td>
+							</tr>
+							{{/each}}
+					</tbody>
+			</table>
+		</script>
+		<script type="text/javascript" src="/dist/js/require.js"></script>
+		<script type="text/javascript">
+		var CONFIG = {
+		// path:'/dist',//online
+		path:'/src/js',//dev
+		pageId: 'cover-manage',
+		version:"1.0.0"
+		}
+		</script>
+		<script type="text/javascript" src="/src/js/boot.js"></script>
+	</body>
+</html>

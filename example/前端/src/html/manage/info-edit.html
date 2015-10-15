@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>商品管理</title>
+		<link rel="stylesheet" type="text/css" href="../../css/page/manage.css">
+	</head>
+	<body>
+		<div id="left-menu" class="tcenter">
+			<a href="#" class="icon icon-kale_logo_red mt20"></a>
+			<p class="lh30 f12 colorafbed1">卡乐猫供应商</p>
+			<div class="menu-list">
+				<a class="current" href="index.html"><i class="icon icon-ic-guanli"></i><div>商品管理</div></a>
+				<a href="cover-record.html"><i class="icon icon-ic-cangku"></i><div>仓前记录</div></a>
+				<a href="settlement-center.html"><i class="icon icon-ic-money"></i><div>结算中心</div></a>
+				<a href="brand-manage.html"><i class="icon icon-ic-brand"></i><div>品牌管理</div></a>
+			</div>
+		</div>
+		<div id="container">
+			<div>
+				<div id="top-menu"><div class="fr"><a class="inlineblock" href="info.html"><i class="icon icon-Path728 fr"></i>账户信息</a><a class="inlineblock"><i class="icon icon-quitcopy fr"></i>退出</a></div><h1 class="corpName">杭州市万色城网络科技有限公司</h1></div>
+				<div class="container">
+					<div id="crumbs" class="f12">
+						<i class="icon icon-ic-home"></i><a class="ml10" href="index.html">微商城</a><i class="icon icon-forward ml10"></i><a class="ml10" href="#">账户信息 </a><i class="icon icon-forward ml10"></i><a class="ml10" href="#">修改结算账户信息 </a>
+					</div>
+					<!-- 下面开始是内容区域 -->
+					<div class="clearfix mt20">
+    						<form class="form js-info-edit" action="../../json/data.json" method="post" data-next="info.html">
+							<div class="fl ml20">
+								<table class="lh50 color999">
+									<tr>
+										<td class="w100 tright pr15">开户银行</td>
+										<td><input type="text" class="w400 txt-input h30 required" required-msg="请填写开户银行" name="goods_name"><span class="tips"><span></span><b></b></span></td>
+									</tr>
+									<tr>
+										<td class="w100 tright pr15">银行账号</td>
+										<td><input type="text" class="w400 txt-input h30 required" required-msg="请填写银行账号" name="goods_name"><span class="tips"><span></span><b></b></span></td>
+									</tr>
+									<tr>
+										<td class="w100 tright pr15">开户银行所在地</td>
+										<td>
+						                        <div class="area-input">
+						                            <div class="area province">
+						                                <input type="hidden" id="hd_province" value="18">
+						                                <span>-- 省份 --</span><i></i>
+						                                <div class="area-content"></div>
+						                            </div>
+						                            <div class="area city">
+						                                <input type="hidden" id="hd_city" value="206">
+						                                <span>-- 城市 --</span><i></i>
+						                                <div class="area-content"><ul></ul></div>
+						                            </div>
+						                            <div class="area downtown">
+						                                <input type="hidden" id="hd_downtown" value="735">
+						                                <span>-- 市区 --</span><i></i>
+						                                <div class="area-content"><ul></ul></div>
+						                            </div>
+						                        </div>
+										</td>
+									</tr>
+									<tr>
+										<td class="w150 tright pr15">开户银行支行名称</td>
+										<td class="lh30"><input type="text" class="w400 txt-input h30 required" required-msg="请填写开户银行支行名称" name="goods_name"><span class="tips"><span></span><b></b></span></td>
+									</tr>
+									<tr>
+										<td class="w100 tright pr15 ttop">支行联行号</td>
+										<td><input type="text" class="w400 txt-input h30 required" required-msg="请填写支行联行号" name="goods_name"><span class="tips"><span></span><b></b></span></td>
+									</tr>
+									<tr>
+										<td></td>
+										<td class=" ttop">
+										<div class="clearfix" id="addAction">
+											<input type="submit" value="提交" class="btn btn-red btn-big" id="btn-submit-import" >
+											<a class="btn btn-gray btn-big" href="info.html" id="btn-cancel">返回</a>
+										</div>
+										</td>
+									</tr>
+								</table>
+							</div>
+						</form>
+					</div>
+					<!-- end -->
+				</div>
+			</div>
+		</div>
+		<script type="text/text-tpl" id="tpl-list">
+			<table class="tab-list">
+					<thead>
+							<tr>
+									<th>商品条码</th>
+									<th>商品名称</th>
+									<th>类目</th>
+									<th>市场价(元)</th>
+									<th>供货价(元)</th>
+									<th>毛利率</th>
+									<th>佣金比例</th>
+									<th>佣金(元)</th>
+									<th>历史销量</th>
+									<th>当前库存</th>
+									<th>入仓时间</th>
+									<th>操作</th>
+							</tr>
+					</thead>
+					<tbody>
+							{{#each data}}
+							<tr>
+									<td>{{goods_id}}</td>
+									<td><a href="">{{goods_name}}</a></td>
+									<td>{{{goods_name}}}</td>
+									<td>122.00</td>
+									<td>30.00</td>
+									<td>3%</td>
+									<td>6%</td>
+									<td>21</td>
+									<td>433</td>
+									<td>999</td>
+									<td>2014/02/22 12:22:33</td>
+									<td><a href="javascript:void(0)" class="ml10 js-del">删除</a></td>
+							</tr>
+							{{/each}}
+					</tbody>
+			</table>
+		</script>
+		<script type="text/javascript" src="/dist/js/require.js"></script>
+		<script type="text/javascript">
+		var CONFIG = {
+		path:'/dist',//dist
+		// path:'/dist',//online
+		path:'/src/js',//dev
+		pageId: 'info',
+		version:"1.0.0",
+        	area:"../../json/area.json"
+		}
+		</script>
+		<script type="text/javascript" src="/src/js/boot.js"></script>
+	</body>
+</html>

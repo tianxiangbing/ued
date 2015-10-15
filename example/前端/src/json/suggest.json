@@ -1,0 +1,7 @@
+{
+    "suggestions": [
+        { "value": "United Arab Emirates", "data": {"goods_name":"abc"} },
+        { "value": "United Kingdom",       "data": {"goods_name":"abc"} },
+        { "value": "United States",        "data": {"goods_name":"abc"}  }
+    ]
+}

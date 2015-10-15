@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>卡乐猫平台供应商入驻申请</title>
+    <link rel="stylesheet" type="text/css" href="../css/page/index.css">
+        <!--[if lt IE 9]>
+        <style>
+        .checkboxFive label{display:none;}
+        </style>
+        <![endif]-->
+    </head>
+    <body>
+        <header>
+            <div class="container">
+                <a href="#" class="logo">
+                </a>
+                <h1 class="page-title">卡乐猫平台供应商入驻申请</h1>
+                <div class="fr mt35 f12">
+                    <a class="color666 mr10 coloref5e4f">13212113122</a>
+                    <a href="#" >退出</a>
+                </div>
+            </div>
+        </header>
+        <div class="container pb80">
+            <ul class="apply-process process2 clearfix">
+                <li class="active"><i></i><span>基本信息</span><b></b><s></s></li>
+                <li><i></i><span>公司证照</span><b></b><s></s></li>
+                <li><i></i><span>经营品牌</span><b></b><s></s></li>
+                <li><i></i><span>企业资质</span><b></b><s></s></li>
+            </ul>
+            <form class="form js-basic-infor form2 clearfix" action="../json/data.json" method="post" data-next="corp-license.html">
+                <div class="form-row clearfix">
+                    <div class="form-label">公司全称</div>
+                    <div class="form-input">
+                        <input type="text" class="txt-input required" required-msg="请输入公司名称" ><span class="tips"><span></span><b></b></span>
+                    </div>
+                </div>
+                <div class="form-row clearfix area-row">
+                    <div class="form-label">公司所在地</div>
+                    <div class="form-input">
+                        <div class="area-input">
+                            <div class="area province">
+                                <input type="hidden" id="hd_province">
+                                <span>-- 省份 --</span><i></i>
+                                <div class="area-content"></div>
+                            </div>
+                            <div class="area city">
+                                <input type="hidden" id="hd_city">
+                                <span>-- 城市 --</span><i></i>
+                                <div class="area-content"><ul></ul></div>
+                            </div>
+                            <div class="area downtown">
+                                <input type="hidden" id="hd_downtown">
+                                <span>-- 市区 --</span><i></i>
+                                <div class="area-content"><ul></ul></div>
+                            </div>
+                            <input type="text" class="txt-input w400 required" required-msg="请输入详细地址" data-type="area"   placeholder="请输入详细地址"><span class="tips"><span></span><b></b></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-row clearfix">
+                    <div class="form-label">员工数</div>
+                    <div class="form-input">
+                        <select name="sel_people" id="" class="sel-input">
+                            <option value="">1~50人</option>
+                            <option value="">50~150人</option>
+                            <option value="">150~300人</option>
+                            <option value="">300~500人</option>
+                            <option value="">500~1000人</option>
+                            <option value="">1000人以上</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-row clearfix">
+                    <div class="form-label">注册资金</div>
+                    <div class="form-input">
+                        <input type="text" class="txt-input w150 required" required-msg="请输入注册资金" data-type="number"><span class="tips"><span></span><b></b></span>
+                    </div>
+                </div>
+                <div class="form-row clearfix">
+                    <div class="form-label">联系人</div>
+                    <div class="form-input">
+                        <input type="text" class="txt-input w100 required " required-msg="请输入联系人"><span class="tips"><span></span><b></b></span>
+                    </div>
+                    <div class="form-label">手机号码</div>
+                    <div class="form-input">
+                        <input type="text" class="txt-input w200 required" required-msg="请输入手机号码" data-type="phone" ><span class="tips"><span></span><b></b></span>
+                    </div>
+                    <div class="form-label">联系电话</div>
+                    <div class="form-input">
+                        <input type="text" class="txt-input w200" ><span class="tips"><span></span><b></b></span>
+                    </div>
+                </div>
+                <div class="form-row clearfix">
+                    <div class="form-label">公司邮箱地址</div>
+                    <div class="form-input">
+                        <input type="text" class="txt-input required " required-msg="请输入公司邮箱地址" data-type="email"><span class="tips"><span></span><b></b></span>
+                    </div>
+                </div>
+                <div class="form-row clearfix">
+                    <div class="form-label">SKU数量</div>
+                    <div class="form-input">
+                        <select name="sel_people" id="" class="sel-input">
+                            <option value="">1~20</option>
+                            <option value="">20~50</option>
+                            <option value="">100~300</option>
+                            <option value="">300~500</option>
+                            <option value="">500~1000</option>
+                            <option value="">1000以上</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="split"><span>银行账户信息</span></div>
+                <div class="form-row clearfix">
+                    <div class="form-label">开启银行</div>
+                    <div class="form-input">
+                        <input type="text" class="txt-input required" required-msg="请输入开启银行" ><span class="tips"><span></span><b></b></span>
+                    </div>
+                </div>
+                <div class="form-row clearfix">
+                    <div class="form-label">公司银行账号</div>
+                    <div class="form-input">
+                        <input type="text" class="txt-input w400 required" required-msg="请输入公司银行账号" data-type="number"><span class="tips"><span></span><b></b></span>
+                    </div>
+                </div>
+                <div class="form-row clearfix area-row">
+                    <div class="form-label">开启银行所在地</div>
+                    <div class="form-input">
+                        <div class="area-input">
+                            <div class="area province">
+                                <input type="hidden" id="hd_province">
+                                <span>-- 省份 --</span><i></i>
+                                <div class="area-content"></div>
+                            </div>
+                            <div class="area city">
+                                <input type="hidden" id="hd_city">
+                                <span>-- 城市 --</span><i></i>
+                                <div class="area-content"><ul></ul></div>
+                            </div>
+                            <div class="area downtown">
+                                <input type="hidden" id="hd_downtown">
+                                <span>-- 市区 --</span><i></i>
+                                <div class="area-content"><ul></ul></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-row clearfix">
+                    <div class="form-label">开启银行支行名称</div>
+                    <div class="form-input">
+                        <input type="text" class="txt-input required" required-msg="请输入开启银行支行名称" ><span class="tips"><span></span><b></b></span>
+                    </div>
+                </div>
+                <div class="form-row clearfix">
+                    <div class="form-label">支行联行号</div>
+                    <div class="form-input">
+                        <input type="text" class="txt-input required" required-msg="请输入支行联行号" ><span class="tips"><span></span><b></b></span>
+                    </div>
+                </div>
+                <div class="form-row clearfix">
+                    <div class="form-label"></div>
+                    <div class="fl checkboxFive mr5"><input type="checkbox" id="checkboxFiveInput" class="mr10 mt10" checked="true" /><label for="checkboxFiveInput"></label></div><div class="fl f12 mt10 lh20">默认结账账户</div>
+                </div>
+                <div class=" clear bordertopeeeeee mt35">
+                    <div class="mt20 tcenter mb40"> <input type="submit" class="btn-submit" value="申请入驻" ></div>
+                </div>
+            </form>
+        </div>
+<footer>
+    <div class="container ">
+        <div class="footer">
+            @v.ewanse.com
+        </div>
+    </div>
+</footer>
+    <script type="text/javascript" src="../../dist/js/require.js"></script>
+        <script type="text/javascript">
+        var CONFIG = {
+        path:'/dist',//dist
+        // path:'/dist',//online
+        path:'../js',//dev
+        pageId: 'basic-infor',
+        version:"1.0.0",
+        area:"../json/area.json"
+        }
+        </script>
+        <script type="text/javascript" src="../js/boot.js"></script>
+    </body>
+</html>

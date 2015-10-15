@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>卡乐猫平台供应商入驻申请</title>
+        <link rel="stylesheet" type="text/css" href="../css/page/index.css">
+        <!--[if lt IE 9]>
+        <style>
+        .checkboxFive label{display:none;}
+        </style>
+        <![endif]-->
+    </head>
+    <body>
+        <header>
+            <div class="container">
+                <a href="#" class="logo">
+                </a>
+                <h1 class="page-title">卡乐猫平台供应商入驻申请</h1>
+                <div class="fr mt35 f12">
+                    <a class="color666 mr10 coloref5e4f">13212113122</a>
+                    <a href="#" >退出</a>
+                </div>
+            </div>
+        </header>
+        <div class="container pb80">
+            <ul class="apply-process process2 clearfix">
+                <li class="active actived"><i></i><span>基本信息</span><b></b><s></s></li>
+                <li class="active"><i></i><span>公司证照</span><b></b><s></s></li>
+                <li><i></i><span>经营品牌</span><b></b><s></s></li>
+                <li><i></i><span>企业资质</span><b></b><s></s></li>
+            </ul>
+            <form class="form js-basic-infor form2 clearfix" action="../json/data.json" method="post" data-next="main-brand.html">
+                <div class="fl">
+                    <div class="form-row clearfix">
+                        <div class="form-label">营业执照号</div>
+                        <div class="form-input">
+                            <input type="text" class="txt-input required w400" required-msg="请输入营业执照号" ><span class="tips"><span></span><b></b></span>
+                        </div>
+                    </div>
+                    <div class="form-row clearfix area-row">
+                        <div class="form-label">营业执照所在地</div>
+                        <div class="form-input">
+                            <div class="area-input">
+                                <div class="area province">
+                                    <input type="hidden" id="hd_province" value="12">
+                                    <span>-- 省份 --</span><i></i>
+                                    <div class="area-content"></div>
+                                </div>
+                                <div class="area city">
+                                    <input type="hidden" id="hd_city" value="124">
+                                    <span>-- 城市 --</span><i></i>
+                                    <div class="area-content"><ul></ul></div>
+                                </div>
+                                <div class="area downtown">
+                                    <input type="hidden" id="hd_downtown" value="3268">
+                                    <span>-- 市区 --</span><i></i>
+                                    <div class="area-content"><ul></ul></div>
+                                </div>
+                                <p class="pt10 clear">
+                                    <input type="text" class="txt-input w400 required" required-msg="请输入详细地址" data-type="area"   placeholder="请输入详细地址"><span class="tips"><span></span><b></b></span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-row clearfix">
+                        <div class="form-label">营业执照有效期</div>
+                        <div class="form-input">
+                            <input type="text" class="txt-input w150 required calendar" required-msg="请输入营业执照有效期" data-type="area" ><span class="tips"><span></span><b></b></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="fl ml60">
+                    <div class="upload">
+                        <h4>营业执照</h4>
+                        <p>[点击上传]</p>
+                    </div>
+                    <input type="hidden" name="file">
+                </div>
+                <div class="fl upload-desc"><p>支持文件格式：jpg、png;</p><p>文件大小不可以超过2M.</p></div>
+                <div class="form-row clearfix">
+                    <div class="form-label">法定营业范围</div>
+                    <div class="form-input">
+                        <textarea class="w400 h130 txt-input pt10 pl10"></textarea>
+                    </div>
+                </div>
+                <div class="fl">
+                    <div class="form-row clearfix">
+                        <div class="form-label">组织机构代码</div>
+                        <div class="form-input">
+                            <input type="text" class="txt-input w400 required " required-msg="请输入组织机构代码"><span class="tips"><span></span><b></b></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="fl ml60">
+                    <div class="upload">
+                        <h4>组织机构代码证</h4>
+                        <p>[点击上传]</p>
+                    </div>
+                    <input type="hidden" name="file">
+                </div>
+                <div class="fl upload-desc"><p>支持文件格式：jpg、png;</p><p>文件大小不可以超过2M.</p></div>
+                <p class="split-38"></p>
+                <div class="fl">
+                    <div class="form-row clearfix">
+                        <div class="form-label">税务登记证号</div>
+                        <div class="form-input">
+                            <input type="text" class="txt-input w400 required" required-msg="请输入税务登记证号" data-type="phone" ><span class="tips"><span></span><b></b></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="fl ml60">
+                    <div class="upload">
+                        <h4>组织机构代码证</h4>
+                        <p>[点击上传]</p>
+                    </div>
+                    <input type="hidden" name="file">
+                </div>
+                <div class="fl upload-desc"><p>支持文件格式：jpg、png;</p><p>文件大小不可以超过2M.</p></div>
+                <p class="split-38"></p>
+                <div class="fl">
+                    <div class="form-row clearfix">
+                        <div class="form-label">纳税人识别号</div>
+                        <div class="form-input">
+                            <input type="text" class="txt-input w400 required"  required-msg="请输入纳税人识别号" ><span class="tips"><span></span><b></b></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="fl ml60">
+                    <div class="upload">
+                        <h4>纳税人证明</h4>
+                        <p>[点击上传]</p>
+                    </div>
+                    <input type="hidden" name="file">
+                </div>
+                <div class="fl upload-desc"><p>支持文件格式：jpg、png;</p><p>文件大小不可以超过2M.</p></div>
+                <p class="split-38"></p>
+                <div class=" clear bordertopeeeeee mt35">
+                    <div class="mt20 tcenter mb40"> <input type="submit" class="btn-submit" value="申请入驻" ></div>
+                </div>
+            </form>
+        </div>
+        <footer>
+            <div class="container ">
+                <div class="footer">
+                    @v.ewanse.com
+                </div>
+            </div>
+        </footer>
+        <script type="text/javascript" src="../../dist/js/require.js"></script>
+        <script type="text/javascript">
+        var CONFIG = {
+        path:'/dist',//dist
+        // path:'/dist',//online
+        path:'../js',//dev
+        pageId: 'corp-license',
+        version:"1.0.0",
+        area:"../json/area.json"
+        }
+        </script>
+        <script type="text/javascript" src="../js/boot.js"></script>
+    </body>
+</html>

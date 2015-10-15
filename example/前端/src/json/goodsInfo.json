@@ -1,0 +1,12 @@
+{
+	"status": true,
+	"msg": "出重故障，请重试！",
+	"data": {
+		"goods_id": 500008,
+		"goods_bn": "bn000501",
+		"goods_name": "商品---001",
+		"supplier_id": 1,
+		"brand_id": 1,
+		"cost": "10.000"
+	}
+}

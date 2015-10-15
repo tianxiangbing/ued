@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>卡乐猫平台供应商入驻申请-企业资质</title>
+        	<link rel="stylesheet" type="text/css" href="../css/page/index.css">
+	</head>
+	<body>
+		<header>
+			<div class="container">
+				<a href="#" class="logo">
+				</a>
+				<h1 class="page-title">卡乐猫平台供应商入驻申请</h1>
+				<div class="fr mt35 f12">
+					<a class="color666 mr10 coloref5e4f">13212113122</a>
+					<a href="#" >退出</a>
+				</div>
+			</div>
+		</header>
+		<div class="container pb80">
+			<ul class="apply-process process2 clearfix">
+				<li class="active actived"><i></i><span>基本信息</span><b></b><s></s></li>
+				<li class="active actived"><i></i><span>公司证照</span><b></b><s></s></li>
+				<li class="active actived"><i></i><span>经营品牌</span><b></b><s></s></li>
+				<li class="active"><i></i><span>企业资质</span><b></b><s></s></li>
+			</ul>
+			<div class="add-brand"><p><i></i>添加企业资质</p></div>
+			<div id="list-brand"></div>
+		</div>
+		<footer>
+			<div class="container ">
+				<div class="footer">
+					@v.ewanse.com
+				</div>
+			</div>
+		</footer>
+		<div class="hide" id="add-brand">
+			<form class="form js-basic-infor form2 clearfix" action="../json/data.json" method="post" data-next="main-brand.html">
+				<div class="fl">
+							<div class="form-row clearfix">
+								<div class="form-label">资质名称</div>
+								<div class="form-input">
+									<input type="text" class="txt-input w400 required" required-msg="请输入资质名称" name="qualificationName"><span class="tips"><span></span><b></b></span>
+								</div>
+							</div>
+							<div class="form-row clearfix">
+								<div class="form-label">起止时间</div>
+								<div class="form-input w400">
+									<span>
+										<input type="text" class="txt-input W185 required  calendar" required-msg="请输入开始时间" name="startTime"><span class="tips"><span></span><b></b></span>
+									</span>
+									<span class="ml20">
+										<input type="text" class="txt-input W185 required calendar" required-msg="请输入结束时间" name="endTime"><span class="tips"><span></span><b></b></span>
+									</span>
+								</div>
+							</div>
+							<div class="form-row clearfix">
+								<div class="form-label">备注</div>
+								<div class="form-input w400">
+									<textarea class="w400 h130 txt-input pt10 pl10" name="memo"></textarea>
+								</div>
+							</div>
+						</div>
+						<div class="fl ml60">
+							<div class="upload">
+								<h4>资质证书</h4>
+								<p>[点击上传]</p>
+							</div>
+							<input type="hidden" name="qualificationCertificate">
+						</div>
+						<div class="fl upload-desc"><p>支持文件格式：jpg、png;</p><p>文件大小不可以超过2M.</p></div>
+						<div class=" clear bordertopeeeeee mt40">
+							<div class="mt30 tcenter"> <input type="submit" class="btn-submit" value="提交"></div>
+						</div>
+					</form>
+				</div>
+				<script type="text/tpl" id="tpl-list">
+				<div id="brand-list" class="qualification">
+					{{#each data}}
+					<div class="item form3 clearfix">
+						<div class="fl w150 h150">
+							<img src="{{{qualificationCertificate}}}" alt="">
+						</div>
+						<div class="fl ml34 w750">
+							<div class="form-row clearfix">
+								<div class="form-label">资质名称：</div>
+								<div class="form-info w670">{{{qualificationName}}}</div>
+							</div>
+							<div class="form-row clearfix">
+								<div class="form-label">起止时间：</div>
+								<div class="form-info w670">{{{startTime}}}到{{{endTime}}}</div>
+							</div>
+							<div class="form-row clearfix">
+								<div class="form-label">　　备注：</div>
+								<div class="form-info w670 lh20">{{{memo}}}</div>
+							</div>
+						</div>
+						<div class="action">
+							<a data-index="{{@index}}" class="js-edit">编辑</a>
+							<a data-index="{{@index}}" class="js-del">删除</a>
+						</div>
+					</div>
+					{{/each}}
+				</div>
+				<div class=" clear mt35">
+					<div class="mt20 tcenter mb40"> <input type="button" data-ajax="../json/data.json" id="js-next" class="btn-submit" value="提交信息"  data-href="audit.html"></div>
+				</div>
+				</script>
+				<script type="text/javascript" src="../../dist/js/require.js"></script>
+				<script type="text/javascript">
+				var CONFIG = {
+				path:'/dist',//dist
+				// path:'/dist',//online
+				path:'../js',//dev
+				pageId: 'enterprise-qualification',
+				version:"1.0.0",
+        			area:"../json/area.json"
+				}
+				</script>
+				<script type="text/javascript" src="../js/boot.js"></script>
+			</body>
+		</html>

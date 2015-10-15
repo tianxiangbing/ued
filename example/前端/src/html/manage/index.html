@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>商品管理</title>
+		<link rel="stylesheet" type="text/css" href="../../css/page/manage.css">
+	</head>
+	<body>
+		<div id="left-menu" class="tcenter">
+			<a href="#" class="icon icon-kale_logo_red mt20"></a>
+			<p class="lh30 f12 colorafbed1">卡乐猫供应商</p>
+			<div class="menu-list">
+				<a class="current" href="index.html"><i class="icon icon-ic-guanli"></i><div>商品管理</div></a>
+				<a href="cover-record.html"><i class="icon icon-ic-cangku"></i><div>仓前记录</div></a>
+				<a href="settlement-center.html"><i class="icon icon-ic-money"></i><div>结算中心</div></a>
+				<a href="brand-manage.html"><i class="icon icon-ic-brand"></i><div>品牌管理</div></a>
+			</div>
+		</div>
+		<div id="container">
+			<div>
+				<div id="top-menu"><div class="fr"><a class="inlineblock"><i class="icon icon-Path728 fr"></i>账户信息</a><a class="inlineblock"><i class="icon icon-quitcopy fr"></i>退出</a></div><h1 class="corpName">杭州市万色城网络科技有限公司</h1></div>
+				<div class="container">
+					<div id="crumbs" class="f12">
+						<i class="icon icon-ic-home"></i><a class="ml10" href="index.html">微商城</a><i class="icon icon-forward ml10"></i><a class="ml10" href="#">商品管理 </a>
+					</div>
+					<!-- 下面开始是内容区域 -->
+					<div class="top-action mt20 clearfix">
+						<a class="btn btn-oringe" href="goods-add.html"><i class="icon icon-ic-tianjia mr10"></i>添加商品</a>
+						<a class="btn btn-gray" href="import.html"><i class="icon icon-ic-daoru mr10"></i>导入商品</a>
+					</div>
+					<div class="table-container">
+						<div class="filter clearfix">
+							<a data-filter='' class="current"><span>全部 <em>2479</em></span></a>
+							<a data-filter='1' class=""><span>新增 <em>279</em></span></a>
+							<a data-filter='2' class=""><span>爆款 <em>479</em></span></a>
+							<a data-filter='3' class=""><span>已上架 <em>79</em></span></a>
+							<a data-filter='4' class=""><span>已下架 <em>49</em></span></a>
+							<a data-filter='5' class=""><span>上架审核 <em>49</em></span></a>
+							<a data-filter='6' class=""><span>爆款审核 <em>9</em></span></a>
+						</div>
+						<div class="search clearfix form">
+							<div class="label fl">类目</div>
+							<div class="c-input fl">
+								<div class="category">
+									<input type="hidden" name="type" id="hd_categoryId" value="category"/>
+									<div class="label"><span>全部</span><i></i></div>
+									<div class="drop-content">
+										<div class="big">
+											<a data-value="">全部</a>
+										</div>
+										<div class="small"><i></i><div></div></div>
+									</div>
+								</div>
+							</div>
+							<div class="label fl">品牌</div>
+							<div class="c-input fl"><select name="txtname" id="" class="txt-input w150"><option value="">全部</option></select></div>
+							<div class="label fl">申请时间</div>
+							<div class="c-input fl idate"><input type="text" class="calendar txt-input w150"><i class="icon icon-ic-data"></i></div>
+							<div class="label fl">至</div>
+							<div class="c-input fl idate"><input type="text" class="calendar txt-input w150"><i class="icon icon-ic-data"></i></div>
+							<div class="label fl">商品名称</div>
+							<div class="c-input fl idate"><input type="text" class=" txt-input w200" name="goods_name"></div>
+							<div class="fl"><a class="btn btn-red ml10" id="search">搜索</a><a href="cover-add.html" id="js-cover-add" class="btn btn-blue ml10"><i class="icon icon-ic-cangbu mr10"></i>申请补仓</a></div>
+						</div>
+						<div id="tab-list" ajaxurl="/src/json/list.json">
+							loading...
+						</div>
+					</div>
+					<!-- end -->
+				</div>
+				<div id="pager"></div>
+			</div>
+		</div>
+		<script type="text/text-tpl" id="tpl-list">
+			<table class="tab-list">
+					<thead>
+							<tr>
+									<th class="first-cell"><div class="fl checkboxFive mr5"><label><input type="checkbox" class="mr10" id="checkAll"/><span></span></label></div>全/反</th>
+									<th>商品条码</th>
+									<th>商品名称</th>
+									<th>类目</th>
+									<th>市场价(元)</th>
+									<th>供货价(元)</th>
+									<th>毛利率</th>
+									<th>佣金比例</th>
+									<th>佣金(元)</th>
+									<th>历史销量</th>
+									<th>当前库存</th>
+									<th>当前状态</th>
+									<th>操作</th>
+							</tr>
+					</thead>
+					<tbody>
+							{{#each data}}
+							<tr>
+									<td class="first-cell"><div class="fl checkboxFive mr5"><label><input type="checkbox" value="{{goods_id}}" class="mr10 js-chk" {{ischecked goods_id}}/><span></span></label></div></td>
+									<td>{{goods_id}}</td>
+									<td><a href="">{{goods_name}}</a></td>
+									<td>{{{goods_name}}}</td>
+									<td>122.00</td>
+									<td>30.00</td>
+									<td>3%</td>
+									<td>6%</td>
+									<td>21</td>
+									<td>433</td>
+									<td>999</td>
+									<td>爆款审核</td>
+									<td><a href="goods-add.html?id={{goods_id}}" >编辑</a><a href="../../json/data.json" class="ml10 js-ajax" js-ajax-param='id="{{goods_id}}"'>上架</a><a href="../../json/data.json" js-ajax-param='id="{{goods_id}}"' class="ml10 js-delegate-delete">删除</a></td>
+							</tr>
+							{{/each}}
+					</tbody>
+			</table>
+		</script>
+		<script type="text/javascript" src="/dist/js/require.js"></script>
+		<script type="text/javascript">
+		var CONFIG = {
+		path:'/dist',//dist
+		// path:'/dist',//online
+		path:'/src/js',//dev
+		pageId: 'goods-manage',
+		version:"1.0.0"
+		}
+		</script>
+		<script type="text/javascript" src="/src/js/boot.js"></script>
+	</body>
+</html>

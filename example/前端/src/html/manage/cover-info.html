@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>商品管理</title>
+		<link rel="stylesheet" type="text/css" href="../../css/page/manage.css">
+	</head>
+	<body>
+		<div id="left-menu" class="tcenter">
+			<a href="#" class="icon icon-kale_logo_red mt20"></a>
+			<p class="lh30 f12 colorafbed1">卡乐猫供应商</p>
+			<div class="menu-list">
+				<a href="index.html"><i class="icon icon-ic-guanli"></i><div>商品管理</div></a>
+				<a class="current" href="cover-record.html"><i class="icon icon-ic-cangku"></i><div>仓前记录</div></a>
+				<a href="settlement-center.html"><i class="icon icon-ic-money"></i><div>结算中心</div></a>
+				<a href="brand-manage.html"><i class="icon icon-ic-brand"></i><div>品牌管理</div></a>
+			</div>
+		</div>
+		<div id="container">
+			<div>
+				<div id="top-menu"><div class="fr"><a class="inlineblock"><i class="icon icon-Path728 fr"></i>账户信息</a><a class="inlineblock"><i class="icon icon-quitcopy fr"></i>退出</a></div><h1 class="corpName">杭州市万色城网络科技有限公司</h1></div>
+				<div class="container">
+					<div id="crumbs" class="f12">
+						<i class="icon icon-ic-home"></i><a class="ml10" href="index.html">微商城</a><i class="icon icon-forward ml10"></i><a class="ml10" href="#">商品管理 </a>
+					</div>
+					<!-- 下面开始是内容区域 -->
+					<div class="form"><div id="search"><input type="hidden" name="goods_id" id="id-list"/></div>
+						<div class="search clearfix color333">
+							<div class="fl mb20">
+								<div class="label fl w150 tright">订单编号：</div>
+								<div class="c-input fl w250">
+									WSC1121233212
+								</div>
+							</div>
+							<div class="fl mb20">
+								<div class="label fl w150 tright">供应商：</div>
+								<div class="c-input fl w250">
+									杭州滴滴达网络科技有限公司
+								</div>
+							</div>
+							<div class="fl mb20">
+								<div class="label fl w150 tright">申请时间：</div>
+								<div class="c-input fl w250">
+									2015/05/20
+								</div>
+							</div>
+							<div class="fl mb20">
+								<div class="label fl w150 tright">采购方式：</div>
+								<div class="c-input fl  w250">
+								集中采购
+								</div>
+							</div>
+							<div class="fl mb20">
+								<div class="label fl w150 tright">预付款：</div>
+								<div class="c-input fl w250">
+								219332元
+								</div>
+							</div>
+							<div class="fl mb20">
+								<div class="label fl w150 tright">到货仓库：</div>
+								<div class="c-input fl relative w250">
+									卡淘仓库
+								</div>
+							</div>
+							<div class="fl mb20">
+								<div class="label fl w150 tright">采购员：</div>
+								<div class="c-input fl w250">
+								某某
+								</div>
+							</div>
+							<div class="fl mb20">
+								<div class="label fl w150 tright">联系电话：</div>
+								<div class="c-input fl w250">
+								1233213
+								</div>
+							</div>
+							<div class="fl mb20">
+								<div class="label fl w150 tright">申请入库时间：</div>
+								<div class="c-input fl w250">
+									2015/02/22 22:21
+								</div>
+							</div>
+							<div class="fl mb20">
+								<div class="label fl w150 tright">审核状态：</div>
+								<div class="c-input fl w250 ">
+									<span class="color2b6cbc">部分通过</span>
+								</div>
+							</div>
+							<div class="fl mb20">
+								<div class="label fl w150 tright">审核人：</div>
+								<div class="c-input fl w250 ">
+									某某某
+								</div>
+							</div>
+							<div class="fl mb20">
+								<div class="label fl w150 tright">审核时间：</div>
+								<div class="c-input fl w250 ">
+									2015/05/14 14:22
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="table-container">
+						<div id="tab-list" ajaxurl="/src/json/list.json">
+							<table class="tab-list cover-list">
+									<thead>
+											<tr>
+													<th class="first-cell">序号</th>
+													<th>商品条码</th>
+													<th>商品名称</th>
+													<th>类目</th>
+													<th>货号</th>
+													<th>市场价(元)</th>
+													<th>供货价(元)</th>
+													<th>积分比例</th>
+													<th>积分</th>
+													<th>当前库存</th>
+													<th>申请数量</th>
+													<th>审核数量</th>
+													<th>订单金额(元)</th>
+													<th>状态</th>
+											</tr>
+									</thead>
+									<tbody>
+											<tr>
+													<td class="first-cell">{{@index}}</td>
+													<td>{{goods_id}}<input type="hidden" name="id" value="{{goods_id}}"></td>
+													<td class="colorblue">{{goods_name}}</td>
+													<td>{{{goods_name}}}</td>
+													<td>122.00</td>
+													<td>30.00</td>
+													<td>3%</td>
+													<td>6%</td>
+													<td>433</td>
+													<td>999</td>
+													<td>22</td>
+													<td>21</td>
+													<td>21</td>
+													<td class="status">
+											<span class="status0">已申请</span>
+											<span class="status1">审核通过</span>
+											<span class="status2">部分通过</span>
+											<span class="status3">驳回</span>
+											<span class="status4">已下单</span>
+											<span class="status5">已入库</span>
+													</td>
+											</tr>
+									</tbody>
+							</table>
+						</div>
+					</div>
+					<div class="clearfix tcenter mt20" id="addAction">
+						<a class="btn btn-gray btn-big" href="index.html" id="btn-cancel">返回</a>
+					</div>
+					<!-- end -->
+				</div>
+			</div>
+		</div>
+		<script type="text/javascript" src="/dist/js/require.js"></script>
+		<script type="text/javascript">
+		var CONFIG = {
+		// path:'/dist',//online
+		path:'/src/js',//dev
+		pageId: 'cover-add',
+		version:"1.0.0"
+		}
+		</script>
+		<script type="text/javascript" src="/src/js/boot.js"></script>
+	</body>
+</html>

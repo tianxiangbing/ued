@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>商品管理</title>
+		<link rel="stylesheet" type="text/css" href="../../css/page/manage.css">
+	</head>
+	<body>
+		<div id="left-menu" class="tcenter">
+			<a href="#" class="icon icon-kale_logo_red mt20"></a>
+			<p class="lh30 f12 colorafbed1">卡乐猫供应商</p>
+			<div class="menu-list">
+				<a href="index.html"><i class="icon icon-ic-guanli"></i><div>商品管理</div></a>
+				<a href="cover-record.html"><i class="icon icon-ic-cangku"></i><div>仓前记录</div></a>
+				<a href="settlement-center.html"><i class="icon icon-ic-money"></i><div>结算中心</div></a>
+				<a class="current" href="brand-manage.html"><i class="icon icon-ic-brand"></i><div>品牌管理</div></a>
+			</div>
+		</div>
+		<div id="container">
+			<div>
+				<div id="top-menu"><div class="fr"><a class="inlineblock" href="info.html"><i class="icon icon-Path728 fr"></i>账户信息</a><a class="inlineblock"><i class="icon icon-quitcopy fr"></i>退出</a></div><h1 class="corpName">杭州市万色城网络科技有限公司</h1></div>
+				<div class="container">
+					<div id="crumbs" class="f12">
+						<i class="icon icon-ic-home"></i><a class="ml10" href="index.html">微商城</a><i class="icon icon-forward ml10"></i><a class="ml10" href="#">商品管理 </a>
+					</div>
+					<!-- 下面开始是内容区域 -->
+					<div class="top-action mt20 clearfix">
+						<a class="btn btn-oringe" href="brand-add.html"><i class="icon icon-ic-tianjia mr10"></i>添加品牌</a>
+					</div>
+					<div class="table-container">
+						<div class="search clearfix form">
+							<input type="hidden" name="type" id="hd_type" value=""/>
+							<div class="label fl">类目</div>
+							<div class="c-input fl"><select name="txtname" id="" class="txt-input w150"><option value="">全部</option></select></div>
+							<div class="label fl">品牌名称</div>
+							<div class="c-input fl idate"><input type="text" class=" txt-input w200" name="goods_name"></div>
+							<div class="fl"><a class="btn btn-red ml10" id="search">搜索</a></div>
+						</div>
+						<div id="tab-list" class=" brand-list" ajaxurl="/src/json/list.json">
+							loading...
+						</div>
+					</div>
+					<!-- end -->
+				</div>
+				<div id="pager"></div>
+			</div>
+		</div>
+		<script type="text/text-tpl" id="tpl-list">
+			<div class="clearfix">
+				{{#each data}}
+				<div class="item clearfix">
+					<div class="fl w200">
+					<img class="w200" src="http://ott.wansecheng.com/weidian/wdgoods/1421671057774.jpg"/>
+					</div>
+					<div class="desc">
+						<div class="row clearfix">
+							<label>主营类目：</label>
+							<div class="info w250">腕表/珠宝饰品/眼镜</div>
+							<label>细分类目：</label>
+							<div class="info w250">手链</div>
+							<label>经营模式：</label>
+							<div class="info w200">代理</div>
+						</div>
+						<div class="row clearfix">
+							<label>品牌名称：</label>
+							<div class="info w250">{{{goods_name}}}</div>
+							<label>品牌类型：</label>
+							<div class="info w250">自营品牌</div>
+							<label>使用期限：</label>
+							<div class="info w200">2013.01.23-2014.01.31</div>
+						</div>
+						<div class="row clearfix">
+							<label>品牌描述：</label>
+							<div class="info w800">卡乐猫卡乐猫卡乐猫卡乐猫卡乐猫,卡乐猫卡乐猫卡乐猫卡乐猫卡乐猫.卡乐猫卡乐猫卡乐猫卡乐猫,卡乐猫卡乐猫卡乐猫卡乐猫.卡乐猫卡乐猫.卡乐猫卡乐猫卡乐猫卡乐猫,卡乐猫卡乐猫卡乐猫卡乐猫.卡乐猫卡乐猫.卡乐猫卡乐猫卡乐猫卡乐猫,卡乐猫卡乐猫卡乐猫卡乐猫.卡乐猫卡乐猫.卡乐猫卡乐猫卡乐猫卡乐猫,卡乐猫卡乐猫卡乐猫卡乐猫.</div>
+						</div>
+					</div>
+					<div class="action"><a href="brand-add.html?id={{goods_id}}" class="colorblue mr20 js-edit">编辑</a><a href="../../json/data.json" js-ajax-param='id="500008"' class="ml10 js-delegate-delete">删除</a></div>
+				</div>
+				{{/each}}
+			</div>
+		</script>
+		<script type="text/javascript" src="/dist/js/require.js"></script>
+		<script type="text/javascript">
+		var CONFIG = {
+		path:'/dist',//dist
+		// path:'/dist',//online
+		path:'/src/js',//dev
+		pageId: 'brand-manage',
+		version:"1.0.0"
+		}
+		</script>
+		<script type="text/javascript" src="/src/js/boot.js"></script>
+	</body>
+</html>

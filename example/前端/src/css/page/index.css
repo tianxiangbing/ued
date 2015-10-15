@@ -1,0 +1,113 @@
+@import url(../common/base.css);
+@import url(../../js/lib/dialog/dialog.css);
+@import url(../../js/lib/calendar/calendar.css);
+html,.ui-dialog{font-family: Microsoft YaHei,Arial,SimSun;color: #1f3752;}
+header,footer{margin:0 auto;background-color: #f6f6f6;height: 80px;border-bottom: 1px solid #dddddd;}
+footer{border:none;/*position: fixed;bottom:0px;left:0;*/width:100%;color:#9d9d9d;}
+.container{width:1000px;margin:0 auto;}
+.logo{display: inline-block;background: url(../imgs/logo-kalemao.png) no-repeat;width:66px;height: 45px;background-size: 66px 45px; margin-top:18px;}
+.page-title{display: inline-block;margin-left:20px;font-size: 20px;line-height: 30px;vertical-align:bottom;}
+.form-input{clear:both;}
+.btn-submit{display: inline-block;line-height: 40px; border-radius: 4px; background-color: #ef5e4f;width:350px;height: 40px;border:none;color:#fff;font-size: 16px;  letter-spacing: 2px;cursor:pointer;}
+.form .tips{margin-left: 10px;font-size: 12px;display: none;color:#999999;}
+.form .tips .ok,.form .tips .error{background: url(../imgs/icon.png) no-repeat;display: inline-block;width:180px;height: 16px;}
+.form .tips .error{background-position: 0 -28px;padding-left:30px;}
+.sended{background-color: #f6f6f6;border:none;color:#ccc;}
+#agreement .content{padding:22px 50px;height:500px;line-height: 1.6;color:#666666;overflow: auto;margin-top: 40px;}
+#agreement p{margin:15px 0;color:#666;}
+.regist-success-info{background-color:#eeeeee;height: 100px;margin-top:30px;text-align: center;padding-top: 80px;font-size: 20px;padding-bottom:20px;}
+.regist-success-info i{display: inline-block;background: url(../imgs/icon.png) no-repeat 0 -50px;height: 30px;width:30px;position:relative;top:7px;right:20px;}
+.regist-success-info a{text-decoration: underline;color:#ef5e4f;}
+.coloref5e4f{color:#ef5e4f;}
+.apply-process{margin-top:40px;overflow: hidden;}
+.apply-process li{float:left;width:250px;}
+.apply-process li s,.apply-process li i{display: inline-block;width:60px;background-color: #ccc;height: 4px;vertical-align: 3px;}
+.apply-process li span{display: inline-block;height: 30px;width: 120px;text-align: center;margin:0 5px;background-color: #dddddd;line-height: 30px;border-radius: 15px;color:#ffffff;}
+.apply-process li.active span,.apply-process li.active i,.apply-process li.actived s{background-color: #5ec97c;}
+.apply-agreement{color:#747474; padding:30px 50px;margin:40px 0 10px 0;background-color: #eeeeee;clear: both;line-height: 1.8;}
+.apply-agreement h3,.apply-agreement h4{line-height: 60px;}
+.center{margin:0 auto;}
+.form2 .form-label,.form2 .form-input{float: left;font-size: 12px;color: #999999;}
+.form2 .form-row{clear: both;margin-bottom: 18px;}
+.form2 .form-input{clear:none;}
+.form2 .form-label{width: 120px;text-align: right;padding-right: 10px;height: 30px;}
+.form2 .split{border-bottom:1px solid #eee;margin-bottom: 40px;position: relative;margin-top: 40px;}
+.form2 .split span{background-color: #fff;position: absolute;left:45%;top:-8px;padding:0 10px;font-size: 12px;color:#666;}
+/*area*/
+.area-input{}
+.area-content{border-radius: 0 0 5px 5px; display: none;background-color: #f6f6f6;border:1px solid #ccc;width:360px;padding:12px;margin-left: -1px; color:#999999;}
+.area-input .area{ background-color: #fff; cursor: pointer; padding-right:20px;float:left;position: relative;height: 40px;border:1px solid #ccc;border-radius: 5px;line-height: 40px;width:100px;text-align: center;margin-right: 17px;}
+.area-input .area i{display: inline-block;width:14px;height:7px;background:url(../imgs/icon.png) 0 -91px no-repeat;position: absolute;right: 12px;top:16px;}
+.area-content ul{overflow: hidden;}
+.area-content li{float:left;padding:6px 4px;line-height: 1;margin-right: 2px;}
+.area-content li:hover,.area-content li.active{background-color: #ef5e4f;color:#fff;border-radius: 2px;}
+.area-input .area.active{border-radius: 5px 5px 0 0;background-color:#f6f6f6;color:#333333;z-index: 34;}
+.area-input .area.active i{background-position: 0 -106px;}
+.area-input .area.active .area-content:before{content:"";display: block;width:120px;height:3px;background-color: #f6f6f6;position: absolute;left:0px;top:40px;z-index: 2;}
+.area-input .area span{height: 30px;overflow: hidden;  display: block;  text-overflow: ellipsis;  white-space: nowrap;}
+
+.form2 .form-input{z-index: 0;}
+.form2 .form-input input,.form2 .form-input select{font-weight: bold;}
+.form2 .form-input .tips{position: absolute;left:0;top:50px;background-color: #fffdc0;border:1px solid #ffe9c0;border-radius: 5px;padding:14px 10px;z-index: 33;}
+.form2 .form-input .tips span{width: 10px;height:6px;display: block;position: absolute;top:-6px;left:20px;background:url(../imgs/icon.png) no-repeat 0 -121px; }
+.area-row{position: relative;z-index: 34;}
+.form2 .form-input .tips b{font-weight: normal;}
+.process2{overflow: visible;}
+.process2 li{position: relative;}
+.process2 li.active span{background-color: transparent;}
+.process2 li span{position: absolute;background-color: transparent;color:#999999;top:-24px;left:60px;}
+.process2 li s, .process2 li i{width:120px;background-color: #eeeeee;height: 2px;}
+.process2 li b{display: inline-block;width: 10px;height: 10px;background:url(../imgs/icon.png) no-repeat 0 -152px;vertical-align: -1px;}
+.process2 li.active b{background-position: 0 -132px;height: 16px;width: 14px;margin-left: -4px;margin-bottom: -3px;}
+.process2 li.actived s, .process2 li.active i{background-color:#ef5e4f; }
+input.error{border-color: #ef5e4f;}
+.upload{position: relative; box-sizing: border-box;cursor: pointer; color:#999999;width: 200px;height: 140px;background: url(../imgs/bg-photo-border.png) no-repeat;text-align: center;padding:40px 0;}
+.upload h4{font-size: 18px;font-weight: normal;}
+.upload p{font-size: 14px;line-height: 1.8;}
+.upload img{position: absolute;top:0;left:0;width:100%;height: 100%;}
+.upload.error{background:#fffdc0; border:1px solid #ffe9c0;color:#EF5E4F;}
+.upload.error h4{font-weight: bold;}
+.footer{padding-top:20px;background:url(../imgs/ft-tit-bg.png) no-repeat;}
+.upload.error h4 s{display: block;background:url(../imgs/icon.png) no-repeat 0 -260px;width: 30px;height: 30px;margin:0 auto;}
+.split-38{clear:both;height: 38px;}
+.upload-desc{font-size: 12px;color:#999;padding-left: 20px;line-height: 20px;}
+iframe{display: none;}
+.upload.error p{font-size: 12px;}
+.upload.error h4 i{display: block;background:url(../imgs/icon.png) no-repeat 0 -224px;width: 30px;height: 30px;  margin: 0 auto;  margin-top: -10px;}
+.upload h4 b{background: url(../imgs/upload-gif.gif) no-repeat;width:26px;height: 8px;margin:0 auto;display: block;}
+.upload.loading{padding-top:60px;}
+
+/*添加主营品牌*/
+.add-brand{border-radius: 4px;background-color: #f6f6f6;cursor:pointer;margin-top: 38px;}
+.add-brand p{height: 150px;line-height: 150px;text-align: center;18px;color:#666;font-weight: bold;}
+.add-brand p.active{height: 60px;line-height: 60px;}
+.add-brand p i{display: inline-block;width: 18px;height: 18px;background: url(../imgs/icon.png) -91px -157px no-repeat;vertical-align: -3px;margin-right: 10px;}
+.add-brand:hover{background-color: #E6E6E6;}
+.add-brand:hover p{color:#333;}
+.add-brand:hover p i{background-position: -91px -188px;}
+#add-brand{padding:15px 40px 40px 40px;width:730px;}
+#add-brand .form-label{width:50px;}
+#add-brand .upload-desc{margin:18px 0 0 40px;}
+#brand-list {margin-top:40px;border-top:1px solid #EEE;}
+#brand-list .item{border-bottom:1px solid #EEE;padding:30px 0;position: relative;}
+#brand-list .item img{width: 150px;height:150px;}
+#brand-list.qualification .item img{width: 200px;height:140px;}
+.w750{width: 750px;}
+.w670{width:670px;}
+.form3{font-size:14px;}
+.form3 .form-label{float: left;}
+.form3 .form-info{float:left;color:#333;line-height: 24px;padding-top:8px; }
+.form3 .action{position: absolute;right: 0;}
+.form3 .action a{color:#2B6CBC;cursor: pointer;margin-left: 30px;}
+.audit h2{color:#333;font-size: 20px;line-height: 45px;}
+.audit{font-size: 14px;padding:65px;}
+/*签订协议*/
+.signed-agreement{background-color: #eee;padding:5px 30px 30px 20px;margin-top:40px;border-right: 1px solid #ccc;height:365px;}
+.signed-agreement .form-label{width:70px;font-size: 14px;}
+.signed-agreement h3,.agree-example h3{font-size: 16px;margin-bottom: 26px;font-weight: normal;}
+.bgeee{background-color: #eee;}
+.agree-example{margin-top:40px;margin-left:1px;height:340px;width: 400px;padding:30px 30px 30px 20px;}
+.form3{font-size: 14px;}
+.form3 .form-label{font-size: 14px;width:70px;}
+.form3 .form-input{font-size: 14px;padding-top:10px;color:#333;width: 320px;}
+.audit i{display: inline-block;background: url(../imgs/icon.png) no-repeat 0 -224px;width:30px;height:30px;vertical-align: -6px;margin-right: 20px;}

@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>商品管理</title>
+		<link rel="stylesheet" type="text/css" href="../../css/page/manage.css">
+	</head>
+	<body>
+		<div id="left-menu" class="tcenter">
+			<a href="#" class="icon icon-kale_logo_red mt20"></a>
+			<p class="lh30 f12 colorafbed1">卡乐猫供应商</p>
+			<div class="menu-list">
+				<a href="index.html"><i class="icon icon-ic-guanli"></i><div>商品管理</div></a>
+				<a class="current" href="cover-record.html"><i class="icon icon-ic-cangku"></i><div>仓前记录</div></a>
+				<a href="settlement-center.html"><i class="icon icon-ic-money"></i><div>结算中心</div></a>
+				<a href="brand-manage.html"><i class="icon icon-ic-brand"></i><div>品牌管理</div></a>
+			</div>
+		</div>
+		<div id="container">
+			<div>
+				<div id="top-menu"><div class="fr"><a class="inlineblock"><i class="icon icon-Path728 fr"></i>账户信息</a><a class="inlineblock"><i class="icon icon-quitcopy fr"></i>退出</a></div><h1 class="corpName">杭州市万色城网络科技有限公司</h1></div>
+				<div class="container">
+					<div id="crumbs" class="f12">
+						<i class="icon icon-ic-home"></i><a class="ml10" href="index.html">微商城</a><i class="icon icon-forward ml10"></i><a class="ml10" href="#">商品管理 </a>
+					</div>
+					<!-- 下面开始是内容区域 -->
+					<div class="form"><div id="search"><input type="hidden" name="goods_id" id="id-list"/></div>
+						<div class="search clearfix color333">
+							<div class="fl mb20">
+								<div class="label fl w150 tright">订单编号</div>
+								<div class="c-input fl">
+									<input type="text" value="sd22222" disabled="true" name="noid" class="txt-input w250">
+								</div>
+							</div>
+							<div class="fl mb20">
+								<div class="label fl w150 tright">申请时间</div>
+								<div class="c-input fl">
+									<input type="text" value="2014-02-21" disabled="true" name="applytime" class="txt-input w250">
+								</div>
+							</div>
+							<div class="fl mb20">
+								<div class="label fl w150 tright">供应商</div>
+								<div class="c-input fl">
+									<input type="text" value="杭州滴滴达有限公司" disabled="true" name="supplyname" class="txt-input w250">
+								</div>
+							</div>
+							<div class="fl mb20">
+								<div class="label fl w150 tright">申请入库时间</div>
+								<div class="c-input fl idate">
+									<input type="text" name="intime" class="txt-input w250 calendar"><i class="icon icon-ic-data"></i>
+								</div>
+							</div>
+							<div class="fl mb20">
+								<div class="label fl w150 tright">采购方式</div>
+								<div class="c-input fl">
+									<select name="txttype" id="" class="txt-input w250"><option value="">全部</option></select>
+								</div>
+							</div>
+							<div class="fl mb20">
+								<div class="label fl w150 tright">预付款</div>
+								<div class="c-input fl relative">
+									<input type="text" data-name="money" data-type="money" class="txt-input w250 txt-money">
+									<span class="unit">元</span>
+								</div>
+							</div>
+							<div class="fl mb20">
+								<div class="label fl w150 tright">到货仓库</div>
+								<div class="c-input fl ">
+									<select name="txtname" id="" class="txt-input w250"><option value="">全部</option></select>
+								</div>
+							</div>
+							<div class="fl mb20">
+								<div class="label fl w150 tright">采购员</div>
+								<div class="c-input fl">
+									<input type="text" class="txt-input w250">
+								</div>
+							</div>
+							<div class="fl mb20">
+								<div class="label fl w150 tright">联系方式</div>
+								<div class="c-input fl">
+									<input type="text" class="txt-input w250">
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="table-container">
+						<div id="tab-list" ajaxurl="/src/json/list.json">
+							loading...
+						</div>
+					</div>
+					<div class="clearfix tcenter mt20" id="addAction">
+						<input type="submit" value="提交" class="btn btn-red btn-big" id="btn-submit-add" href="cover-record.html" data-url="/src/json/data.json">
+						<a class="btn btn-gray btn-big" href="index.html" id="btn-cancel">返回</a>
+					</div>
+					<!-- end -->
+				</div>
+			</div>
+		</div>
+		<script type="text/text-tpl" id="tpl-list">
+			<table class="tab-list cover-list">
+					<thead>
+							<tr>
+									<th class="first-cell">序号</th>
+									<th>商品条码</th>
+									<th>商品名称</th>
+									<th>类目</th>
+									<th>货号</th>
+									<th>市场价(元)</th>
+									<th>供货价(元)</th>
+									<th>积分比例</th>
+									<th>积分</th>
+									<th>当前库存</th>
+									<th>申请数量</th>
+									<th>审核数量</th>
+									<th>订单金额(元)</th>
+									<th>操作</th>
+							</tr>
+					</thead>
+					<tbody>
+							{{#each data}}
+							<tr>
+									<td class="first-cell">{{@index}}</td>
+									<td>{{goods_id}}<input type="hidden" name="id" value="{{goods_id}}"></td>
+									<td class="colorblue">{{goods_name}}</td>
+									<td>{{{goods_name}}}</td>
+									<td>122.00</td>
+									<td>30.00</td>
+									<td>3%</td>
+									<td>6%</td>
+									<td>433</td>
+									<td>999</td>
+									<td><a class="icon icon-jian1 js-minus-count"></a><input type="text" class="txt-input h30 w50 js-count" name="count" value="1"><a class="icon icon-jia2 js-add-count"></a></td>
+									<td>21</td>
+									<td>21</td>
+									<td><a href="javascript:void(0)" class="js-addrow">增行</a><a  href="javascript:void(0)" class="js-delrow ml10" class="ml10">删除</a></td>
+							</tr>
+							{{/each}}
+					</tbody>
+			</table>
+		</script>
+		<script type="text/tpl" id="tpl-row">
+			<tr>
+				<td class="first-cell"></td>
+				<td><input type="text" class="txt-input h30 w150 suggest" data-url="../../json/suggest.json" value="{{goods_id}}" data-goodsinfo="../../json/goodsInfo.json"><input type="hidden" name="id" value="{{goods_id}}"></td>
+				<td class="colorblue"><input type="text" class="txt-input h30 w150 suggest" data-url="../../json/suggest.json" value="{{goods_name}}" data-goodsinfo="../../json/goodsInfo.json"></td>
+				<td>{{cost}}</td>
+				<td>{{goods_name}}</td>
+				<td>{{goods_name}}</td>
+				<td>{{goods_name}}</td>
+				<td>{{goods_name}}</td>
+				<td>{{goods_name}}</td>
+				<td>{{goods_name}}</td>
+				<td><a class="icon icon-jian1 js-minus-count"></a><input type="text" class="txt-input h30 w50 js-count" value="1"><a class="icon icon-jia2 js-add-count"></a></td>
+				<td>{{goods_name}}</td>
+				<td>{{goods_name}}</td>
+				<td><a href="javascript:void(0)" class="js-addrow">增行</a><a  href="javascript:void(0)" class="js-delrow ml10" class="ml10">删除</a></td>
+			</tr>
+		</script>
+		<script type="text/javascript" src="/dist/js/require.js"></script>
+		<script type="text/javascript">
+		var CONFIG = {
+		// path:'/dist',//online
+		path:'/src/js',//dev
+		pageId: 'cover-add',
+		version:"1.0.0"
+		}
+		</script>
+		<script type="text/javascript" src="/src/js/boot.js"></script>
+	</body>
+</html>

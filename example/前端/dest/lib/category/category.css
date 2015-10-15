@@ -1,0 +1,11 @@
+.category{position:relative;width:150px;border:1px solid #ddd;height: 30px;}
+.drop-content{color:#666;display:none;background-color: #f4f4f4; position: absolute;  z-index: 2;  width: 100%;border:1px solid #ddd;border-top: none;box-sizing:border-box;padding:10px;top:29px;left:-1px;}
+.category .label{position: relative;cursor: pointer;}
+.category .label i{display:inline-block;width:14px;height:7px;background:url(../../../css/imgs/icon.png) 0 -91px no-repeat;position:absolute;right:0px;top:13px;}
+.category.active{background-color: #f4f4f4;}
+.drop-content .big a{display: block;}
+.drop-content .small a{margin:10px 20px;float: left;}
+.drop-content .big a,.drop-content .small a{cursor: pointer;}
+.drop-content .big a:hover,.drop-content .small a:hover{color:#ef5e4f;}
+.drop-content .small{line-height:1;display: none; position: absolute;left:150px;min-height: 140px;min-width: 300px;background-color: #f4f4f4;top:0;border:1px solid #ddd;}
+.drop-content .small i{display: block;width:10px;height:18px;position:absolute;left:-1px;top:35px;background: url(../../../css/imgs/icon.png) -161px -272px no-repeat;}
